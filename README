@@ -1,0 +1,40 @@
+Date-DateTime-Easy
+
+INSTALLATION
+
+To install this module, run the following commands:
+
+	perl Makefile.PL
+	make
+	make test
+	make install
+
+SUPPORT AND DOCUMENTATION
+
+After installing, you can find documentation for this module with the
+perldoc command.
+
+    perldoc Date::DateTime::Easy
+
+You can also look for information at:
+
+    RT, CPAN's request tracker
+        http://rt.cpan.org/NoAuth/Bugs.html?Dist=Date-DateTime-Easy
+
+    AnnoCPAN, Annotated CPAN documentation
+        http://annocpan.org/dist/Date-DateTime-Easy
+
+    CPAN Ratings
+        http://cpanratings.perl.org/d/Date-DateTime-Easy
+
+    Search CPAN
+        http://search.cpan.org/dist/Date-DateTime-Easy
+
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2007 Robert Krimen
+
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+
