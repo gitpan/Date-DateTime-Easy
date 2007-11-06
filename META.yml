@@ -1,6 +1,6 @@
 ---
 name: Date-DateTime-Easy
-version: 0.020
+version: 0.021
 author:
   - 'Robert Krimen, C<< <rkrimen at cpan.org> >>'
 abstract: Quickly and easily create a Date::DateTime object (by parsing almost anything)
@@ -15,7 +15,7 @@ build_requires:
 provides:
   Date::DateTime::Easy:
     file: lib/Date/DateTime/Easy.pm
-    version: 0.020
+    version: 0.021
 generated_by: Module::Build version 0.2806
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html

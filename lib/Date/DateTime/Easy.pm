@@ -9,11 +9,11 @@ Date::DateTime::Easy - Quickly and easily create a Date::DateTime object (by par
 
 =head1 VERSION
 
-Version 0.020
+Version 0.021
 
 =cut
 
-our $VERSION = '0.020';
+our $VERSION = '0.021';
 
 =head1 SYNOPSIS
 
@@ -78,7 +78,6 @@ Furthermore, you can simply pass the value for "parse" as the first positional a
     # ...is the same as this:
     Date::DateTime::Easy->new(parse => "today", year => 2008, truncate => "hour");
 
-Also, 
 =head1 EXPORT
 
 =head2 parse( ... )
@@ -86,6 +85,8 @@ Also,
 =head2 parse_date( ... )
 
 =head2 parse_datetime( ... )
+
+=head2 date( ... )
 
 =head2 datetime( ... )
 
@@ -157,12 +158,12 @@ under the same terms as Perl itself.
 =cut
 
 use base qw/Exporter/;
-our @EXPORT_OK = qw/datetime parse parse_datetime parse_date new_datetime new_date/;
+our @EXPORT_OK = qw/datetime parse parse_datetime parse_date new_datetime new_date date/;
 
 use Date::Manip qw/ParseDate UnixDate/;
 use DateTime;
 
-sub parse {
+sub new {
     shift if $_[0] && $_[0] eq __PACKAGE__;
 
     my $parse;
@@ -188,10 +189,12 @@ sub parse {
 
     return $dt;
 }
-*new = \&parse;
-*datetime = \&parse;
-*parse_datetime = \&parse;
-*new_datetime = \&parse;
-*new_date = \&parse;
+*parse = \&new;
+*parse_date = \&new;
+*parse_datetime = \&new;
+*date = \&new;
+*datetime = \&new;
+*new_date = \&new;
+*new_datetime = \&new;
 
 1; # End of Date::DateTime::Easy
